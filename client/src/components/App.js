@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     fetch("/spices")
       .then((r) => r.json())
-      .then(setSpices);
+      .then((data) => setSpices(data));
   }, []);
 
   function handleAddSpice(addedSpice) {
